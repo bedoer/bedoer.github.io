@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme=""><head>
-    <title>  | First </title>
+    <title>  | 使用Hugo搭建个人博客(Win10) </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.81.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -50,13 +50,35 @@
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="First"/>
-<meta name="twitter:description" content="我的第一篇博客  考研数学网课学习 英语单词背诵 课程作业的完成 个人博客网站的搭建及过程记录 算法题目  "/>
+<meta name="twitter:title" content="使用Hugo搭建个人博客(Win10)"/>
+<meta name="twitter:description" content="Hugo的下载与环境变量的配置(Win10) 在https://github.com/gohugoio/hugo/releases处下载对应版本的hugo。我下载的版本是下面这个: 将下载的压缩包解压。
+设置环境变量: 此电脑-属性-高级系统设置-环境变量-系统变量中的Path中新建，路径为解压后文件夹中hugo.exe文件的位置。如图: 配置好后在cmd中运行&quot;hugo &ndash;version&quot;若无误则配置正确。
+初始化站点目录 hugo new site 文件夹名字 主题的下载与设置 在https://themes.gohugo.io/挑选喜欢的主题并下载。
+用git clone命令将主题下载至themes文件夹下，如：
+git clone git@github.com:lxndrblz/anatole.git themes/anatole 使用下载的anatole主题，生成页面并启动Web服务（该命令需在生成目录下运行）：
+ 可以使用&quot;hugo &ndash;help&quot;来查询相关命令
+ hugo server -t anatole --buildDrafts 可以在浏览器地址栏输入该地址查看（刚开始可能有些简陋，后续会进一步美化）
+通过“hugo new”命令可以为站点创建一个新内容
+在Github上的部署 在github上创建一个名为&quot;你的用户名.github.io&quot;的仓库
+cmd运行：
+hugo --theme=主题名 --baseUrl=&quot;库的地址&quot; --buildDrafts 如果使用Github来部署博客，只需要将public/里的文件上传到刚刚创建的库就可以。
+ git init （把这个目录变成Git可以管理的仓库） git add . （把文件添加到仓库） git commit -m &quot;&quot; （把文件提交到仓库） git remote add origin 仓库地址.git （把一个已有的本地仓库与之关联） git push -u origin master （把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）  最终，就可以通过 https://仓库名 访问博客了（搭建在GitHub上可能不是很稳定）"/>
 
 
     
-    <meta property="og:title" content="First" />
-<meta property="og:description" content="我的第一篇博客  考研数学网课学习 英语单词背诵 课程作业的完成 个人博客网站的搭建及过程记录 算法题目  " />
+    <meta property="og:title" content="使用Hugo搭建个人博客(Win10)" />
+<meta property="og:description" content="Hugo的下载与环境变量的配置(Win10) 在https://github.com/gohugoio/hugo/releases处下载对应版本的hugo。我下载的版本是下面这个: 将下载的压缩包解压。
+设置环境变量: 此电脑-属性-高级系统设置-环境变量-系统变量中的Path中新建，路径为解压后文件夹中hugo.exe文件的位置。如图: 配置好后在cmd中运行&quot;hugo &ndash;version&quot;若无误则配置正确。
+初始化站点目录 hugo new site 文件夹名字 主题的下载与设置 在https://themes.gohugo.io/挑选喜欢的主题并下载。
+用git clone命令将主题下载至themes文件夹下，如：
+git clone git@github.com:lxndrblz/anatole.git themes/anatole 使用下载的anatole主题，生成页面并启动Web服务（该命令需在生成目录下运行）：
+ 可以使用&quot;hugo &ndash;help&quot;来查询相关命令
+ hugo server -t anatole --buildDrafts 可以在浏览器地址栏输入该地址查看（刚开始可能有些简陋，后续会进一步美化）
+通过“hugo new”命令可以为站点创建一个新内容
+在Github上的部署 在github上创建一个名为&quot;你的用户名.github.io&quot;的仓库
+cmd运行：
+hugo --theme=主题名 --baseUrl=&quot;库的地址&quot; --buildDrafts 如果使用Github来部署博客，只需要将public/里的文件上传到刚刚创建的库就可以。
+ git init （把这个目录变成Git可以管理的仓库） git add . （把文件添加到仓库） git commit -m &quot;&quot; （把文件提交到仓库） git remote add origin 仓库地址.git （把一个已有的本地仓库与之关联） git push -u origin master （把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）  最终，就可以通过 https://仓库名 访问博客了（搭建在GitHub上可能不是很稳定）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://github.com/bedoer/bedoer.github.io/blog/first/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-03-09T16:07:53&#43;08:00" />
@@ -108,18 +130,44 @@
         <div class="post-content">
             
             <div class="post-title">
-                <h3>First</h3>
+                <h3>使用Hugo搭建个人博客(Win10)</h3>
                 
             </div>
 
-            <h1 id="我的第一篇博客">我的第一篇博客</h1>
+            <h1 id="hugo的下载与环境变量的配置win10">Hugo的下载与环境变量的配置(Win10)</h1>
+<p>在<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>处下载对应版本的hugo。我下载的版本是下面这个:
+<img src="hugo%E4%B8%8B%E8%BD%BD.png" alt="hugo下载">
+将下载的压缩包解压。</p>
+<p><strong>设置环境变量:</strong> 此电脑-属性-高级系统设置-环境变量-系统变量中的Path中新建，路径为解压后文件夹中hugo.exe文件的位置。如图:
+<img src="%E8%B7%AF%E5%BE%84.png" alt="环境变量设置"></p>
+<p>配置好后在cmd中运行&quot;hugo &ndash;version&quot;若无误则配置正确。</p>
+<h1 id="初始化站点目录">初始化站点目录</h1>
+<pre><code>hugo new site 文件夹名字
+</code></pre><h1 id="主题的下载与设置">主题的下载与设置</h1>
+<p>在<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>挑选喜欢的主题并下载。</p>
+<p>用git clone命令将主题下载至themes文件夹下，如：</p>
+<pre><code>git clone git@github.com:lxndrblz/anatole.git themes/anatole
+</code></pre><p>使用下载的anatole主题，生成页面并启动Web服务（该命令需在生成目录下运行）：</p>
+<blockquote>
+<p>可以使用&quot;hugo &ndash;help&quot;来查询相关命令</p>
+</blockquote>
+<pre><code>hugo server -t anatole --buildDrafts
+</code></pre><p><img src="Web%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8.png" alt="启动Web服务"></p>
+<p>可以在浏览器地址栏输入该地址查看（刚开始可能有些简陋，后续会进一步美化）</p>
+<p>通过“hugo new”命令可以为站点创建一个新内容</p>
+<h1 id="在github上的部署">在Github上的部署</h1>
+<p>在github上创建一个名为&quot;你的用户名.github.io&quot;的仓库</p>
+<p>cmd运行：</p>
+<pre><code>hugo --theme=主题名 --baseUrl=&quot;库的地址&quot; --buildDrafts
+</code></pre><p>如果使用Github来部署博客，只需要将public/里的文件上传到刚刚创建的库就可以。</p>
 <ol>
-<li>考研数学网课学习</li>
-<li>英语单词背诵</li>
-<li>课程作业的完成</li>
-<li>个人博客网站的搭建及过程记录</li>
-<li>算法题目</li>
+<li>git init （把这个目录变成Git可以管理的仓库）</li>
+<li>git add . （把文件添加到仓库）</li>
+<li>git commit -m &quot;&quot; （把文件提交到仓库）</li>
+<li>git remote add origin 仓库地址.git （把一个已有的本地仓库与之关联）</li>
+<li>git push -u origin master （把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）</li>
 </ol>
+<p>最终，就可以通过 https://仓库名 访问博客了（搭建在GitHub上可能不是很稳定）</p>
 </div>
         <div class="post-footer">
             <div class="info">
